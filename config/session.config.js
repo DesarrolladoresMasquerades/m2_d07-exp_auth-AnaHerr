@@ -26,7 +26,8 @@ module.exports = (app) => {
         httpOnly: true,
         maxAge: 60000 // 60 * 1000 ms === 1 min
       }, // ADDED code below !!!
-      store: MongoStore.create({
+      store: MongoStore.
+      create({
         mongoUrl: process.env.MONGODB_URI || "mongodb://localhost/basic-auth"
 
         // ttl => time to live
